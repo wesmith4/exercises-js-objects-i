@@ -17,6 +17,7 @@
     },
     "rules": {
         "comma-dangle": ["error", "always-multiline"],
+        "dot-notation": 0,
         "prefer-const": 0,
         "semi": [2, "always"],
         "space-before-function-paren": ["error", "never"],
