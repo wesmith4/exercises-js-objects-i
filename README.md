@@ -23,6 +23,10 @@ Exercises to practice common ways of using objects in JavaScript.
 
 ## Exercises
 
+In JavaScript, objects and dictionaries are the same thing. In other languages, there's a sharp distinction between the two.
+
+So, **remember**: read the [dictionary section][intro-js-dictionaries] of the JS Crash Course!
+
 ### Creating And Accessing Data In Objects
 
 Even if you feel comfortable creating, accessing, and modifying objects, go through this exercise and treat it like a mini-quiz. If you really understand how to do all the above, this exercise should take no more than 2-3 minutes.
@@ -162,3 +166,5 @@ In general, the `person.firstName` syntax is what you'll see used most often. Ho
    ```
 
    We couldn't type, say, `user.dynamicPropertyName`, because that'd be looking for the property whose name was literally `'dynamicPropertyName'`, not the property whose name is the value of the `dynamicPropertyName` variable.
+
+[intro-js-dictionaries]: https://github.com/jfarmer/intro-javascript/blob/master/Collections/Dictionaries.md
