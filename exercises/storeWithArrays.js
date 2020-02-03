@@ -40,11 +40,7 @@ function newSofa(name, price) {
  * and `false` otherwise.
  */
 function userCanAffordSofa(user, sofa) {
-  if (user[2] >= sofa[1]) {
-    return true;
-  } else {
-    return false;
-  }
+  return user[2] >= sofa[1];
 }
 
 let allUsers = [
