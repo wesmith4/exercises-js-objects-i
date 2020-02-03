@@ -8,25 +8,17 @@ let process = require('process');
   2. Implement userCanAffordSofa
 */
 
-// --- DELETE THE LINES STARTING HERE ---
-let removeThisToStart = true;
-
-if (removeThisToStart) {
-  console.log('Hey! Open up storeWithObjects.js to see how to get started.');
-  process.exit();
-}
-
-// --- DELETE THE LINES ENDING HERE ---
 
 /**
  * Creates and returns a new user (as an object).
  */
-function newUser(firstName, lastName, budget) {
+function newUser(firstName, lastName, budget, email) {
   let user = [];
 
   user['firstName'] = firstName;
   user['lastName'] = lastName;
   user['budget'] = budget;
+  user['email'] = email;
 
   return user;
 }
@@ -48,16 +40,14 @@ function newSofa(name, price) {
  * and `false` otherwise.
  */
 function userCanAffordSofa(user, sofa) {
-  // This is your job. :)
-
   return user['budget'] >= sofa['price'];
 }
 
 let allUsers = [
-  newUser('Alyssa', 'Morris', 1800.00),
-  newUser('Mindy', 'Weaver', 200.00),
-  newUser('Louis', 'Washington', 850.00),
-  newUser('Kevin', 'Isaacs', 80.00),
+  newUser('Alyssa', 'Morris', 1800.00, 'alyssa@example.com'),
+  newUser('Mindy', 'Weaver', 200.00, 'mindywindy@thisisit.com'),
+  newUser('Louis', 'Washington', 850.00, 'louisWashBoy@itsthebomb.com'),
+  newUser('Kevin', 'Isaacs', 80.00, 'kevin@spillthechili.com'),
 ];
 
 let sofa = newSofa('Nice Sofa', 800.00);
@@ -74,9 +64,11 @@ for (let user of allUsers) {
   if (userCanAffordSofa(user, sofa)) {
     console.log('Congratulations!');
     console.log(`A ${sofa['name']} costs ${sofa['price']}, which is within your budget of ${user['budget']}!`);
+    console.log(`We'll be in touch! Look out for a message in your ${user['email']} inbox.`);
   } else {
     console.log(`Sorry, ${user['firstName']}, but you can't afford a ${sofa['name']}.`);
     console.log(`Your budget is ${user['budget']}, but a ${sofa['name']} costs ${sofa['price']}.`);
+    console.log(`We'll send you some info with more options. Check your ${user['email']} inbox.`);
   }
 
   console.log();
